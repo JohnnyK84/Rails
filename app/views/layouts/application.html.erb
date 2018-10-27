@@ -7,9 +7,22 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+    <!-- added this to access open sans font-->
   </head>
 
   <body>
+  
+  <div class="topnav">
+    <div class="hlogo">
+      <%= image_tag("awoolo_header_logo.png", :alt => "awoolo_h_logo") %>
+    </div>
+    <%= link_to "Home", root_path %>
+    <%= link_to "About", 'about' %>
+    <%= link_to "Downloads", 'downloads' %>
+    <%= link_to "Product", 'product' %>
+    <input class="search" type="text" placeholder="Search..">
+</div>
     <%= yield %>
   </body>
 </html>
