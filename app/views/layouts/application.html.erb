@@ -15,12 +15,21 @@
 
   <div class="topnav">
     <div class="hlogo">
-      <%= image_tag("awoolo_header_logo.png", :alt => "awoolo_h_logo") %>
+      <%= image_tag("awoolo_header_logo.png", :alt => "awoolo_h_logo", :class => "topnavlogo") %>
     </div>
-    <%= link_to "Home", root_path %>
-    <%= link_to "About", 'about' %>
-    <%= link_to "Downloads", 'downloads' %>
-    <%= link_to "Product", 'product' %>
+    <div class = "topnavlinks">
+      <div class = "dropdown">
+        <button class= "dropbtn" >MEDIA</button>
+        <div class = "dropdown-content">
+          <%= link_to "MEDIA PLAYER", 'product' %>
+          <%= link_to "RADIO APP", 'about' %>
+          <%= link_to "VIDEO FILE CONVERTER", 'downloads' %>
+        </div>
+      </div>
+      <%= link_to "HOME", root_path %>
+      <%= link_to "ABOUT", 'about', :class => "dropbtn"%>
+      <%= link_to "DOWNLOADS", 'downloads' %>      
+    </div>
     <input class="search" type="text" placeholder="Search..">
   </div>
 
