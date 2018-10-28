@@ -8,11 +8,11 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
-    <!-- added this to access open sans font-->
+    <!-- added this stylesheet to access open sans font-->
   </head>
 
-  <body>
-  
+  <body>  
+
   <div class="topnav">
     <div class="hlogo">
       <%= image_tag("awoolo_header_logo.png", :alt => "awoolo_h_logo") %>
@@ -22,7 +22,54 @@
     <%= link_to "Downloads", 'downloads' %>
     <%= link_to "Product", 'product' %>
     <input class="search" type="text" placeholder="Search..">
-</div>
+  </div>
+
     <%= yield %>
+
   </body>
+
+  <div class=footer>
+    <div class = "footer1">
+      <div class = "footercol1">
+        <ul class = "fc1nav">
+          <li><a  class = "footerhead" href="">OFFICE SOLUTIONS</a></li>
+          <li><a href="about">Word Processor</a></li>
+          <li><a href="">PDF Converter</a></li>
+          <li><a href="">Zip File Opner</a></li>        
+        </ul>        
+      </div>
+      <div class = "footercol2">        
+        <ul class = "fc1nav">
+          <li><a class = "footerhead" href="">MEDIA</a></li>
+          <li><a href="">Media Player</a></li>
+          <li><a href="">Radio App</a></li>
+          <li><a href="">Video File Converter</a></li>        
+        </ul>
+      </div>
+      <div class = "footercol3">
+        
+        <ul class = "fc1nav">
+          <li><a class = "footerhead" href="">SUPPORT</a></li>
+          <li><a href="">FAQS</a></li>
+          <li><a href="">Download & Install</a></li>
+          <li><a href="">Contact</a></li>        
+        </ul>
+      </div>
+    </div>
+    
+    <div class = "footer2">
+      <div class = "footlogo">
+        <%= image_tag("awoolo_footer_logo.png", :alt => "awoolo_h_logo", :class =>"footerlogoimage") %>        
+        <p class="footp">Copyright	&#169 2018 Awooloo. All rights reserved.</p>        
+      </div>
+
+      <div class = "footbotright">
+          <p class="privacypolicy">Privacy Policy<p>
+          <p class="termsofuse">Terms of Use<p>
+          <p class="cookies">Cookies<p>
+        </div>
+      
+    </div>
+
+  </div>
 </html>
